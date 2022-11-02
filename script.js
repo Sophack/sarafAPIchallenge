@@ -74,3 +74,13 @@ var guageWidth=150;
 let count =0;
 var guageProgresUnit = guageWidth/questionTime;
 
+function counterRender({
+    if(count <= questionTime){
+        counter.innerHTML=count;
+        timeGuage.style.width = guageProgresUnit*count +"px";
+
+    }else{
+        
+    }
+})
+
