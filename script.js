@@ -75,12 +75,34 @@ let count =0;
 var guageProgresUnit = guageWidth/questionTime;
 
 function counterRender({
-    if ( count <= questionTime ) {
+    if (count <= questionTime ) {
         counter.innerHTML=count;
         timeGuage.style.width = guageProgresUnit*count +"px";
+        count++;    
+    } else {
+        count=0;
+        answerIsWrong();
+        if(runningQuestionIndex < lastQuestionIndex){
+            runningQuestionIndex++;
+            questionRender();
+        }else{ clearInterval(TIMER);
+            scoreRender();
+        }    
+        }
+    
+);
 
-    }else{
 
-    }
-});
+start.addEventListener("click", startQuiz);
+let TIMER 
+function startQuiz(){
+    start.style.display ="none";
+    counterRender();
+    TIMER = setInterval(counterRender, 1000);
+    progressRender();
+    questionRender();
+    quiz.style.display = "block";
+    
+}
 
+//showing error on line 78 the IF statements is wrong 
