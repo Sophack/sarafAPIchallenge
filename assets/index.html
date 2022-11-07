@@ -8,17 +8,35 @@
     <link rel = "stylesheet" href = "main.css">
 </head>
 
+<header class="quiz intro">
+</header>
 
 <body>
 
-    <div class = "wrapper">
-      <h2 id="countdown"></h2> 
-      <div class = "quiz-score"></div>
-        <div class = "quiz-container">
+  <div class = "wrapper">
+    
+  <div class="start_btn"><button>Start Quiz</button></div>
+
+  <div class="info_box">
+    <h2 id="countdown"></h2> 
+    <div class = "quiz-score">SCORE<span id = "correct-score"></span>/<span id = "total-question"></span></div>
+
+    <div class="info-title">
+      
+      <span><h1>Coding Quiz Challenge</h1></span></div>
+      <div class="info-list">
+      <div class="info">Try to answer the following code-related questions within the time limit. 
+      Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</p>
+    </div>
+    <button class="restart">Continue</button>
+  
+    </div>
+    <div class = "quiz-container">
+        
             <div class = "quiz-head">
                 <h1 class = "quiz-title">Quiz Game</h1>
                 
-                    <span id = "correct-score"></span>/<span id = "total-question"></span>
+
                 
             </div>
             <div class = "quiz-body">

@@ -7,8 +7,15 @@ var _result = document.getElementById('result');
 var _correctScore = document.getElementById('correct-score');
 var _totalQuestion = document.getElementById('total-question');
 var timerEl = document.getElementById('countdown');
+const start_btn = document.querySelector(".start_btn button");
+const info_box = document.querySelector(".info_box");
+
 
 let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10;
+
+start_btn.onclick = ()=>{
+    info_box.classList.add("activeInfo"); //show info box
+}
 
 function countdown() {
     var timeLeft = 60;
@@ -18,7 +25,7 @@ function countdown() {
       // As long as the `timeLeft` is greater than 1
       if (timeLeft > 1) {
         // Set the `textContent` of `timerEl` to show the remaining seconds
-        timerEl.textContent = timeLeft + ' seconds remaining';
+        timerEl.textContent = 'Time: ' + timeLeft;
         // Decrement `timeLeft` by 1
         timeLeft--;
       } else if (timeLeft === 1) {
@@ -45,6 +52,19 @@ async function loadQuestion(){
     _result.innerHTML = "";
     showQuestion(data.results[0]);
 }
+
+
+// const userScore = 0;
+// const restart_quiz = result_box.querySelector(".buttons .restart");
+// const counter;
+
+// restart_quiz.onclick = ()=>{
+//     quiz_box.classList.add("activeWrapper"); //show quiz box
+//     userScore = 0;
+//     clearInterval(counter); //clear counter
+//     countdown(timeValue); //calling countdown timer function
+    
+//     }
 
 // event listeners
 function eventListeners(){
