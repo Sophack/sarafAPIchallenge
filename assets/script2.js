@@ -18,8 +18,9 @@ start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
 }
 
+var timeLeft = 60;
+
 function countdown() {
-    var timeLeft = 60;
   
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
@@ -51,6 +52,7 @@ async function loadQuestion(){
     _result.innerHTML = "";
     showQuestion(data.results[0]);
 }
+//write the questions manually
 
 
 
