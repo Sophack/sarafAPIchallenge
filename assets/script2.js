@@ -9,6 +9,7 @@ var _totalQuestion = document.getElementById('total-question');
 var timerEl = document.getElementById('countdown');
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
+const continue_btn = info_box.querySelector(".buttons .restart");
 
 
 let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10;
@@ -37,8 +38,6 @@ function countdown() {
         timerEl.textContent = '';
         // Use `clearInterval()` to stop the timer
         clearInterval(timeInterval);
-        // Call the `displayMessage()` function
-        displayMessage();
       }
     }, 1000);
   }
@@ -54,17 +53,6 @@ async function loadQuestion(){
 }
 
 
-// const userScore = 0;
-// const restart_quiz = result_box.querySelector(".buttons .restart");
-// const counter;
-
-// restart_quiz.onclick = ()=>{
-//     quiz_box.classList.add("activeWrapper"); //show quiz box
-//     userScore = 0;
-//     clearInterval(counter); //clear counter
-//     countdown(timeValue); //calling countdown timer function
-    
-//     }
 
 // event listeners
 function eventListeners(){
