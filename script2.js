@@ -18,6 +18,7 @@ start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
 }
 
+
 var timeLeft = 60;
 
 function countdown() {
